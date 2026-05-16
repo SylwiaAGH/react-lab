@@ -19,13 +19,14 @@ function App() {
         message = 'Twój adres e-mail jest stanowczo za długi.'
     }
 
+
     return (
     <div>
       <h1> System do zapisów na zajęcia </h1>
         <h2>Twój e-mail to {email}</h2>
         {email.length >0 && <div> {message} </div>}
         <input type="text" onChange={handleChange}/>
-
+        <button onClick= {()=> alert(email)}> Wyświetl mój adres </button>
 
     </div>
   );
