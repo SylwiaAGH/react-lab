@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
+import "milligram";
 
 function App() {
     const [email, setEmail] = useState('fracz@agh.edu.pl');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     return (
-    <div>
+    <div className= "container">
       <h1>Witaj w systemie do zapisów na zajęcia</h1>
         { !isLoggedIn && <div>
             <input type="text" onChange={(event) => setEmail (event.target.value)}/>
